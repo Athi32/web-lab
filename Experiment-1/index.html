@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ComicVerse | Comic Book Store</title>
+
+    <style>
+        /* ---------- GENERAL STYLING ---------- */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #120b1f;
+            color: #f5e9d0;
+        }
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            background: linear-gradient(135deg, #24103f, #4b1d69);
+            color: #ffd166;
+            text-align: center;
+            padding: 35px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin: 10px;
+            letter-spacing: 3px;
+        }
+
+        header p {
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+        /* ---------- NAVIGATION ---------- */
+
+        nav {
+            background-color: #0a0610;
+            padding: 18px;
+            text-align: center;
+            border-bottom: 3px solid #ffd166;
+        }
+
+        nav a {
+            color: #ffd166;
+            text-decoration: none;
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff7b00;
+        }
+
+        /* ---------- SECTIONS ---------- */
+
+        section {
+            background-color: #21142f;
+            margin: 25px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            color: #ffd166;
+            border-left: 5px solid #ff7b00;
+            padding-left: 12px;
+        }
+
+        h3 {
+            color: #ff9f1c;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        /* ---------- HERO IMAGE ---------- */
+
+        .hero-image {
+            width: 100%;
+            max-width: 700px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+            display: block;
+            margin: 20px auto;
+            border: 3px solid #ffd166;
+        }
+
+        /* ---------- COMIC CARDS ---------- */
+
+        .comic-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .comic-card {
+            background-color: #302044;
+            width: 250px;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .comic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px #000000;
+        }
+
+        .comic-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .comic-card h3 {
+            color: #ffd166;
+        }
+
+        /* ---------- BUTTON ---------- */
+
+        .button {
+            display: inline-block;
+            background-color: #ff7b00;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #ffd166;
+            color: #1a1025;
+        }
+
+        /* ---------- TABLE ---------- */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #5b2a86;
+            color: #ffd166;
+        }
+
+        th,
+        td {
+            border: 1px solid #8064a2;
+            padding: 14px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2b1b3d;
+        }
+
+        /* ---------- LISTS ---------- */
+
+        li {
+            margin: 10px;
+        }
+
+        dt {
+            color: #ffd166;
+            font-size: 19px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        dd {
+            margin-bottom: 10px;
+        }
+
+        /* ---------- LINKS ---------- */
+
+        a {
+            color: #ff9f1c;
+        }
+
+        /* ---------- CONTACT ---------- */
+
+        .contact-box {
+            background-color: #302044;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background-color: #08050d;
+            color: #ffd166;
+            text-align: center;
+            padding: 25px;
+            border-top: 3px solid #ff7b00;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- HEADER SECTION -->
+
+    <header>
+
+        <h1>⚡ COMICVERSE ⚡</h1>
+
+        <p>
+            Discover Heroes • Explore Worlds • Collect Stories
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION SECTION -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#comics">Comics</a>
+
+        <a href="#categories">Categories</a>
+
+        <a href="#pricing">Pricing</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <!-- HOME SECTION -->
+
+    <div id="home">
+
+        <section>
+
+            <h2>Welcome to ComicVerse</h2>
+
+            <p>
+                Welcome to ComicVerse, your premium destination
+                for exciting comic books and graphic adventures.
+            </p>
+
+            <p>
+                Explore powerful heroes, mysterious villains,
+                fantasy worlds and futuristic adventures.
+            </p>
+
+
+            <!-- MAIN COMIC IMAGE -->
+
+            <img
+                class="hero-image"
+                src="https://images.unsplash.com/photo-1608889825103-eb5ed706fc64"
+                alt="Comic Book Collection">
+
+
+            <center>
+
+                <a class="button" href="#comics">
+                    Explore Collection
+                </a>
+
+            </center>
+
+        </section>
+
+    </div>
+
+
+    <!-- COMIC COLLECTION SECTION -->
+
+    <div id="comics">
+
+        <section>
+
+            <h2>Featured Comic Collection</h2>
+
+            <div class="comic-container">
+
+
+                <!-- COMIC 1 -->
+
+                <div class="comic-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1531501410720-c8d437636169"
+                        alt="Comic Book">
+
+                    <h3>The Shadow Guardian</h3>
+
+                    <p>
+                        A mysterious hero protects the city
+                        from dangerous forces.
+                    </p>
+
+                    <a class="button" href="#pricing">
+                        View Price
+                    </a>
+
+                </div>
+
+
+                <!-- COMIC 2 -->
+
+                <div class="comic-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1578632767115-351597cf2477"
+                        alt="Comic Collection">
+
+                    <h3>Galaxy Warriors</h3>
+
+                    <p>
+                        A group of heroes travels across
+                        galaxies to save humanity.
+                    </p>
+
+                    <a class="button" href="#pricing">
+                        View Price
+                    </a>
+
+                </div>
+
+
+                <!-- COMIC 3 -->
+
+                <div class="comic-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1561070791-2526d30994b5"
+                        alt="Comic Art">
+
+                    <h3>Chronicles of Magic</h3>
+
+                    <p>
+                        Enter a magical world filled with
+                        wizards and legendary creatures.
+                    </p>
+
+                    <a class="button" href="#pricing">
+                        View Price
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- CATEGORIES SECTION -->
+
+    <div id="categories">
+
+        <section>
+
+            <h2>Comic Categories</h2>
+
+            <dl>
+
+                <dt>🦸 Superhero</dt>
+
+                <dd>
+                    Stories featuring powerful heroes,
+                    villains and extraordinary abilities.
+                </dd>
+
+
+                <dt>🧙 Fantasy</dt>
+
+                <dd>
+                    Magical worlds, mythical creatures
+                    and legendary adventures.
+                </dd>
+
+
+                <dt>🚀 Science Fiction</dt>
+
+                <dd>
+                    Futuristic technology, space exploration
+                    and alien worlds.
+                </dd>
+
+
+                <dt>🗺️ Adventure</dt>
+
+                <dd>
+                    Exciting journeys filled with mysteries,
+                    challenges and discoveries.
+                </dd>
+
+            </dl>
+
+        </section>
+
+    </div>
+
+
+    <!-- ORDERED NESTED LIST -->
+
+    <section>
+
+        <h2>How to Choose Your Comic</h2>
+
+        <ol>
+
+            <li>
+                Select a Genre
+
+                <ol>
+                    <li>Superhero</li>
+                    <li>Fantasy</li>
+                    <li>Adventure</li>
+                </ol>
+
+            </li>
+
+
+            <li>
+                Select Your Format
+
+                <ol>
+                    <li>Digital Edition</li>
+                    <li>Paperback</li>
+                    <li>Collector Edition</li>
+                </ol>
+
+            </li>
+
+        </ol>
+
+    </section>
+
+
+    <!-- UNORDERED NESTED LIST -->
+
+    <section>
+
+        <h2>Store Features</h2>
+
+        <ul>
+
+            <li>
+                Comic Collections
+
+                <ul>
+                    <li>New Releases</li>
+                    <li>Classic Collections</li>
+                    <li>Limited Editions</li>
+                </ul>
+
+            </li>
+
+
+            <li>
+                Customer Services
+
+                <ul>
+                    <li>Online Ordering</li>
+                    <li>Secure Payment</li>
+                    <li>Customer Support</li>
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- PRICING TABLE -->
+
+    <div id="pricing">
+
+        <section>
+
+            <h2>Comic Collection Pricing</h2>
+
+            <table>
+
+                <tr>
+                    <th>Collection</th>
+                    <th>Issues</th>
+                    <th>Format</th>
+                    <th>Price</th>
+                </tr>
+
+
+                <tr>
+                    <td>Starter Pack</td>
+                    <td>3</td>
+                    <td>Digital</td>
+                    <td>₹299</td>
+                </tr>
+
+
+                <tr>
+                    <td>Hero Collection</td>
+                    <td>10</td>
+                    <td>Paperback</td>
+                    <td>₹799</td>
+                </tr>
+
+
+                <tr>
+                    <td>Ultimate Collection</td>
+                    <td>25</td>
+                    <td>Hardcover</td>
+                    <td>₹1,499</td>
+                </tr>
+
+
+                <tr>
+                    <td>Collector Edition</td>
+                    <td>40</td>
+                    <td>Special Edition</td>
+                    <td>₹2,499</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+    </div>
+
+
+    <!-- EXTERNAL AND BOOKMARK LINKS -->
+
+    <section>
+
+        <h2>Explore More</h2>
+
+        <p>
+            Learn more about the history of comic books:
+        </p>
+
+        <a href="https://en.wikipedia.org/wiki/Comics"
+           target="_blank">
+            📖 Explore Comic History
+        </a>
+
+        <br><br>
+
+        <a href="#contact">
+            📩 Go to Contact Section
+        </a>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+
+    <div id="contact">
+
+        <section>
+
+            <h2>Contact ComicVerse</h2>
+
+            <div class="contact-box">
+
+                <p>
+                    Have questions about our comic collections?
+                    Contact our support team.
+                </p>
+
+                <p>
+                    📧 Email:
+                    <a href="mailto:contact@comicverse.com">
+                        contact@comicverse.com
+                    </a>
+                </p>
+
+                <p>
+                    📞 Phone:
+                    <a href="tel:+919876543210">
+                        +91 98765 43210
+                    </a>
+                </p>
+
+                <p>
+                    📍 Location: Coimbatore, Tamil Nadu
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- FOOTER SECTION -->
+
+    <footer>
+
+        <p>
+            © 2026 ComicVerse | Premium Comic Book Store
+        </p>
+
+        <p>
+            Designed using HTML5 & CSS
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
