@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- HTML5 DOCUMENT INFORMATION -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ComicVerse | CSS3 Comic Book Store</title>
+
+
+    <!-- CSS3 STYLING -->
+
+    <style>
+
+        /* ---------- NORMAL FLOW / BODY ---------- */
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #120b1f;
+            color: #f5e9d0;
+            font-family: Georgia, Garamond, serif;
+        }
+
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            width: 100%;
+            height: 230px;
+
+            background-color: #24103f;
+
+            background-image:
+                url("https://images.unsplash.com/photo-1608889825103-eb5ed706fc64");
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            text-align: center;
+
+            padding-top: 40px;
+
+            box-sizing: border-box;
+        }
+
+
+        header h1 {
+            color: #ffd166;
+
+            font-size: 48px;
+
+            font-weight: bolder;
+
+            letter-spacing: 6px;
+
+            text-shadow:
+                4px 4px 8px #000000;
+
+            margin-top: 20px;
+
+            margin-bottom: 10px;
+        }
+
+
+        header p {
+            color: white;
+
+            font-size: 20px;
+
+            font-style: italic;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* ---------- NAVIGATION ---------- */
+
+        nav {
+            background-color: #08050d;
+
+            padding: 18px;
+
+            text-align: center;
+        }
+
+
+        nav a {
+            display: inline;
+
+            padding: 12px 20px;
+
+            margin: 5px;
+
+            font-family: Arial, sans-serif;
+
+            font-weight: bold;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+        }
+
+
+        /* Unvisited link */
+
+        nav a:link {
+            color: #ffd166;
+            background-color: #21142f;
+        }
+
+
+        /* Visited link */
+
+        nav a:visited {
+            color: #ffcf70;
+        }
+
+
+        /* Mouse hover */
+
+        nav a:hover {
+            color: #ffffff;
+            background-color: #ff7b00;
+        }
+
+
+        /* Active link */
+
+        nav a:active {
+            color: #21142f;
+            background-color: #ffd166;
+        }
+
+
+        /* ---------- NORMAL FLOW SECTION ---------- */
+
+        .section {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 50px;
+            margin-right: 50px;
+
+            padding-top: 25px;
+            padding-bottom: 25px;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            background-color: #21142f;
+
+            border-radius: 15px;
+        }
+
+
+        /* ---------- HEADINGS ---------- */
+
+        h2 {
+            color: #ffd166;
+
+            font-size: 30px;
+
+            text-align: left;
+
+            text-decoration: underline;
+
+            letter-spacing: 2px;
+
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+
+        h3 {
+            color: #ff9f1c;
+
+            font-size: 22px;
+
+            font-weight: bold;
+        }
+
+
+        /* ---------- PARAGRAPH FORMATTING ---------- */
+
+        .intro {
+            margin-top: 25px;
+
+            margin-bottom: 25px;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            text-align: justify;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* ---------- IMAGE ---------- */
+
+        .store-image {
+            display: block;
+
+            width: 70%;
+
+            height: 300px;
+
+            object-fit: cover;
+
+            margin-top: 25px;
+
+            margin-bottom: 25px;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+            padding: 8px;
+
+            background-color: #ffd166;
+
+            border-radius: 15px;
+        }
+
+
+        /* ---------- COMIC CARDS ---------- */
+
+        .comic-container {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .comic-card {
+            display: block;
+
+            width: 250px;
+
+            min-height: 380px;
+
+            padding: 20px;
+
+            background-color: #302044;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            box-sizing: border-box;
+        }
+
+
+        .comic-card:hover {
+            background-color: #3d2855;
+
+            transform: translateY(-5px);
+        }
+
+
+        .comic-card img {
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+        }
+
+
+        .comic-card h3 {
+            letter-spacing: 1px;
+        }
+
+
+        /* ---------- MULTI COLUMN LAYOUT ---------- */
+
+        .multi-column {
+            column-count: 3;
+
+            column-gap: 40px;
+
+            column-rule: 2px solid #8064a2;
+
+            padding: 25px;
+
+            background-color: #302044;
+
+            text-align: justify;
+
+            line-height: 1.7;
+        }
+
+
+        .multi-column h3 {
+            break-before: avoid;
+        }
+
+
+        /* ---------- LIST ---------- */
+
+        ul {
+            list-style-type: circle;
+
+            padding-left: 30px;
+        }
+
+
+        ol {
+            list-style-type: upper-roman;
+
+            padding-left: 30px;
+        }
+
+
+        li {
+            margin-bottom: 10px;
+
+            padding: 3px;
+        }
+
+
+        /* ---------- LINK SECTION ---------- */
+
+        .store-link {
+            display: block;
+
+            width: 200px;
+
+            padding: 15px;
+
+            margin: 20px auto;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            background-color: #ff7b00;
+
+            color: white;
+
+            border-radius: 8px;
+        }
+
+
+        .store-link:hover {
+            background-color: #ffd166;
+
+            color: #21142f;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            width: 100%;
+
+            padding-top: 25px;
+            padding-bottom: 25px;
+
+            background-color: #08050d;
+
+            color: #ffd166;
+
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+        }
+
+
+        footer p {
+            margin: 8px;
+        }
+
+
+        /* ---------- RESPONSIVE DESIGN ---------- */
+
+        @media screen and (max-width: 800px) {
+
+            .multi-column {
+                column-count: 2;
+            }
+
+            .section {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+        }
+
+
+        @media screen and (max-width: 500px) {
+
+            .multi-column {
+                column-count: 1;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                display: block;
+
+                margin: 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER SECTION -->
+
+    <header>
+
+        <h1>⚡ COMICVERSE ⚡</h1>
+
+        <p>
+            Where Every Page Begins an Adventure
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION SECTION -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#collection">Collection</a>
+
+        <a href="#categories">Categories</a>
+
+        <a href="#about">About</a>
+
+    </nav>
+
+
+    <!-- HOME SECTION -->
+
+    <div id="home"
+         class="section">
+
+        <h2>Welcome to ComicVerse</h2>
+
+        <p class="intro">
+
+            ComicVerse is a premium comic book store
+            designed for readers, collectors and
+            adventure lovers. Our collection includes
+            superhero stories, fantasy adventures,
+            science-fiction worlds and exciting
+            graphic novels.
+
+        </p>
+
+
+        <img
+            class="store-image"
+            src="https://images.unsplash.com/photo-1608889825103-eb5ed706fc64"
+            alt="Comic Book Store">
+
+
+        <p class="intro">
+
+            Our goal is to bring amazing stories and
+            creative artwork together in one place.
+            Explore our collections and discover
+            your next favourite comic adventure.
+
+        </p>
+
+    </div>
+
+
+    <!-- COMIC COLLECTION -->
+
+    <div id="collection"
+         class="section">
+
+        <h2>Featured Comic Collection</h2>
+
+
+        <div class="comic-container">
+
+
+            <!-- COMIC CARD 1 -->
+
+            <div class="comic-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1531501410720-c8d437636169"
+                    alt="Shadow Guardian Comic">
+
+                <h3>The Shadow Guardian</h3>
+
+                <p>
+                    A mysterious hero protects the city
+                    from powerful enemies.
+                </p>
+
+            </div>
+
+
+            <!-- COMIC CARD 2 -->
+
+            <div class="comic-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1578632767115-351597cf2477"
+                    alt="Galaxy Warriors Comic">
+
+                <h3>Galaxy Warriors</h3>
+
+                <p>
+                    A team of heroes travels across
+                    galaxies to protect humanity.
+                </p>
+
+            </div>
+
+
+            <!-- COMIC CARD 3 -->
+
+            <div class="comic-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1561070791-2526d30994b5"
+                    alt="Magic Comic">
+
+                <h3>Chronicles of Magic</h3>
+
+                <p>
+                    A magical journey filled with
+                    mystery and legendary creatures.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MULTI COLUMN SECTION -->
+
+    <div id="categories"
+         class="section">
+
+        <h2>Explore Comic Categories</h2>
+
+
+        <div class="multi-column">
+
+
+            <div>
+
+                <h3>🦸 Superhero</h3>
+
+                <p>
+                    Superhero comics feature powerful
+                    characters who protect people from
+                    dangerous villains. These stories
+                    combine action, adventure and
+                    extraordinary abilities.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>🧙 Fantasy</h3>
+
+                <p>
+                    Fantasy comics take readers into
+                    magical worlds filled with wizards,
+                    mythical creatures, mysterious
+                    kingdoms and legendary adventures.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>🚀 Science Fiction</h3>
+
+                <p>
+                    Science-fiction comics explore
+                    futuristic technology, space travel,
+                    advanced civilizations and
+                    mysterious alien worlds.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>🗺️ Adventure</h3>
+
+                <p>
+                    Adventure comics are filled with
+                    exciting journeys, hidden treasures,
+                    dangerous challenges and
+                    unexpected discoveries.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>👻 Mystery</h3>
+
+                <p>
+                    Mystery comics involve puzzles,
+                    secrets, investigations and
+                    unexpected twists that keep
+                    readers interested.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>🤖 Futuristic</h3>
+
+                <p>
+                    Futuristic stories explore advanced
+                    machines, artificial intelligence,
+                    robots and imaginative technology.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- LIST SECTION -->
+
+    <div class="section">
+
+        <h2>Why Choose ComicVerse?</h2>
+
+
+        <ul>
+
+            <li>Wide range of comic collections</li>
+
+            <li>Premium quality editions</li>
+
+            <li>Affordable prices</li>
+
+            <li>Fast delivery</li>
+
+            <li>Collector editions</li>
+
+        </ul>
+
+
+        <h3>How to Buy a Comic</h3>
+
+
+        <ol>
+
+            <li>Choose your favourite comic</li>
+
+            <li>Select the required edition</li>
+
+            <li>Add the comic to your collection</li>
+
+            <li>Complete your order</li>
+
+        </ol>
+
+    </div>
+
+
+    <!-- ABOUT SECTION -->
+
+    <div id="about"
+         class="section">
+
+        <h2>About ComicVerse</h2>
+
+
+        <p class="intro">
+
+            ComicVerse combines modern web design
+            with the exciting world of comic books.
+            CSS3 properties are used to create
+            attractive layouts, spacing, typography,
+            backgrounds and interactive links.
+
+        </p>
+
+
+        <p class="intro">
+
+            The webpage demonstrates both normal
+            document flow and multi-column layout
+            techniques to organize content efficiently.
+
+        </p>
+
+
+        <a
+            class="store-link"
+            href="https://www.google.com"
+            target="_blank">
+
+            Visit ComicVerse
+
+        </a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 ComicVerse | Premium Comic Book Store
+        </p>
+
+        <p>
+            Designed using HTML5 & CSS3
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
