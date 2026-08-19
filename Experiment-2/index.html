@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- BASIC HTML5 INFORMATION -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ComicVerse | Multimedia Comic Book Store</title>
+
+
+    <!-- INTERNAL CSS -->
+
+    <style>
+
+        /* ---------- BODY ---------- */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #120b1f;
+            color: #f5e9d0;
+        }
+
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            background: linear-gradient(135deg, #24103f, #5b2a86);
+            color: #ffd166;
+            text-align: center;
+            padding: 35px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin: 10px;
+            letter-spacing: 3px;
+        }
+
+        header p {
+            color: white;
+            font-size: 18px;
+        }
+
+
+        /* ---------- NAVIGATION ---------- */
+
+        nav {
+            background-color: #08050d;
+            padding: 18px;
+            text-align: center;
+            border-bottom: 3px solid #ff9f1c;
+        }
+
+        nav a {
+            color: #ffd166;
+            text-decoration: none;
+            margin: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff7b00;
+        }
+
+
+        /* ---------- SECTIONS ---------- */
+
+        section {
+            background-color: #21142f;
+            margin: 25px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #000000;
+        }
+
+
+        /* ---------- HEADINGS ---------- */
+
+        h2 {
+            color: #ffd166;
+            border-left: 5px solid #ff7b00;
+            padding-left: 12px;
+        }
+
+        h3 {
+            color: #ff9f1c;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+
+        /* ---------- HERO IMAGE ---------- */
+
+        .hero-image {
+            width: 100%;
+            max-width: 700px;
+            height: 330px;
+            object-fit: cover;
+            display: block;
+            margin: 20px auto;
+            border-radius: 15px;
+            border: 3px solid #ffd166;
+        }
+
+
+        /* ---------- COMIC CARDS ---------- */
+
+        .comic-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .comic-card {
+            background-color: #302044;
+            width: 250px;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .comic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px #000000;
+        }
+
+        .comic-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+
+        /* ---------- TABLE ---------- */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #5b2a86;
+            color: #ffd166;
+        }
+
+        th,
+        td {
+            border: 1px solid #8064a2;
+            padding: 13px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2b1b3d;
+        }
+
+
+        /* ---------- INFORMATION BOX ---------- */
+
+        .info-box {
+            background-color: #302044;
+            border-left: 5px solid #ffd166;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+
+        /* ---------- MULTIMEDIA ---------- */
+
+        audio {
+            width: 80%;
+            display: block;
+            margin: 20px auto;
+        }
+
+        video {
+            width: 80%;
+            max-width: 700px;
+            display: block;
+            margin: 20px auto;
+            border: 3px solid #ffd166;
+            border-radius: 10px;
+        }
+
+        iframe {
+            width: 90%;
+            height: 300px;
+            border: 3px solid #ffd166;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        embed {
+            width: 90%;
+            height: 300px;
+            display: block;
+            margin: 20px auto;
+            border: 3px solid #ff7b00;
+            border-radius: 10px;
+        }
+
+
+        /* ---------- FORM ---------- */
+
+        form {
+            background-color: #302044;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        fieldset {
+            border: 2px solid #ffd166;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            padding: 20px;
+        }
+
+        legend {
+            color: #ffd166;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            color: #ffcf70;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #f5e9d0;
+            color: #21142f;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        input[type="range"] {
+            width: 80%;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: auto;
+            padding: 12px 25px;
+            background-color: #ff7b00;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #ffd166;
+            color: #21142f;
+        }
+
+
+        /* ---------- PROGRESS ---------- */
+
+        progress {
+            width: 80%;
+            height: 25px;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background-color: #08050d;
+            color: #ffd166;
+            text-align: center;
+            padding: 25px;
+            border-top: 3px solid #ff7b00;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER SECTION -->
+
+    <header>
+
+        <h1>⚡ COMICVERSE ⚡</h1>
+
+        <p>
+            Premium Comic Books • Collectibles • Adventures
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION SECTION -->
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#collection">Collection</a>
+
+        <a href="#media">Media</a>
+
+        <a href="#order">Order</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <!-- HOME SECTION -->
+
+    <div id="home">
+
+        <section>
+
+            <h2>Welcome to ComicVerse</h2>
+
+            <p>
+                Welcome to ComicVerse, your premium destination
+                for exciting comic books, collectibles and
+                graphic adventures.
+            </p>
+
+            <p>
+                Discover powerful heroes, mysterious villains,
+                fantasy worlds and futuristic adventures
+                in one amazing collection.
+            </p>
+
+
+            <!-- COMIC IMAGE -->
+
+            <img
+                class="hero-image"
+                src="https://images.unsplash.com/photo-1608889825103-eb5ed706fc64"
+                alt="Comic Book Collection">
+
+
+            <div class="info-box">
+
+                <h3>📚 About ComicVerse</h3>
+
+                <p>
+                    ComicVerse is an online comic book store
+                    created for readers and collectors.
+                </p>
+
+                <p>
+                    We offer superhero, fantasy, adventure
+                    and science-fiction comic collections.
+                </p>
+
+                <p>
+                    📦 Fast Delivery &nbsp; |
+                    💳 Secure Payment &nbsp; |
+                    🎁 Gift Wrapping
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- COMIC COLLECTION SECTION -->
+
+    <div id="collection">
+
+        <section>
+
+            <h2>Featured Comic Collection</h2>
+
+
+            <div class="comic-container">
+
+
+                <!-- COMIC CARD 1 -->
+
+                <div class="comic-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1531501410720-c8d437636169"
+                        alt="Comic Book">
+
+                    <h3>The Shadow Guardian</h3>
+
+                    <p>
+                        A mysterious hero protects the city
+                        from dangerous forces.
+                    </p>
+
+                </div>
+
+
+                <!-- COMIC CARD 2 -->
+
+                <div class="comic-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1578632767115-351597cf2477"
+                        alt="Comic Collection">
+
+                    <h3>Galaxy Warriors</h3>
+
+                    <p>
+                        Heroes travel across galaxies
+                        to protect humanity.
+                    </p>
+
+                </div>
+
+
+                <!-- COMIC CARD 3 -->
+
+                <div class="comic-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1561070791-2526d30994b5"
+                        alt="Comic Art">
+
+                    <h3>Chronicles of Magic</h3>
+
+                    <p>
+                        Enter a magical world filled
+                        with wizards and legendary creatures.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMIC PRICE TABLE -->
+
+            <h3>Comic Collection Pricing</h3>
+
+            <table>
+
+                <tr>
+
+                    <th>Comic Collection</th>
+
+                    <th>Genre</th>
+
+                    <th>Issues</th>
+
+                    <th>Format</th>
+
+                    <th>Price</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>The Shadow Guardian</td>
+
+                    <td>Superhero</td>
+
+                    <td>10</td>
+
+                    <td>Paperback</td>
+
+                    <td>₹799</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Galaxy Warriors</td>
+
+                    <td>Science Fiction</td>
+
+                    <td>15</td>
+
+                    <td>Hardcover</td>
+
+                    <td>₹999</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Chronicles of Magic</td>
+
+                    <td>Fantasy</td>
+
+                    <td>12</td>
+
+                    <td>Paperback</td>
+
+                    <td>₹899</td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>Ultimate Heroes</td>
+
+                    <td>Adventure</td>
+
+                    <td>20</td>
+
+                    <td>Collector Edition</td>
+
+                    <td>₹1499</td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+    </div>
+
+
+    <!-- MULTIMEDIA SECTION -->
+
+    <div id="media">
+
+        <section>
+
+            <h2>🎬 ComicVerse Multimedia</h2>
+
+
+            <!-- AUDIO -->
+
+            <h3>🎵 Pleasant ComicVerse Music</h3>
+
+            <p>
+                Relax and explore our comic collection
+                with pleasant background music.
+            </p>
+
+            <audio controls>
+
+                <source
+                    src="comic-music.mp3"
+                    type="audio/mpeg">
+
+                Your browser does not support audio.
+
+            </audio>
+
+
+            <!-- VIDEO -->
+
+            <h3>🎥 Comic Adventure Trailer</h3>
+
+            <p>
+                Watch a short adventure video while
+                exploring ComicVerse.
+            </p>
+
+            <video controls>
+
+                <source
+                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                    type="video/mp4">
+
+                Your browser does not support video.
+
+            </video>
+
+
+            <!-- EMBED -->
+
+            <h3>📄 Comic Information Document</h3>
+
+            <p>
+                The following embedded document demonstrates
+                the HTML5 embed element.
+            </p>
+
+            <embed
+                src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                type="application/pdf">
+
+
+            <!-- IFRAME -->
+
+            <h3>📍 ComicVerse Location</h3>
+
+            <p>
+                Find our ComicVerse store location
+                in Coimbatore, Tamil Nadu.
+            </p>
+
+            <iframe
+                src="https://www.google.com/maps?q=Coimbatore,Tamil%20Nadu&output=embed"
+                title="ComicVerse Location">
+
+            </iframe>
+
+        </section>
+
+    </div>
+
+
+    <!-- ORDER FORM SECTION -->
+
+    <div id="order">
+
+        <section>
+
+            <h2>🛒 Comic Book Order Form</h2>
+
+            <p>
+                Fill in your details below to place
+                a ComicVerse order.
+            </p>
+
+
+            <form action="#" method="get">
+
+
+                <!-- CUSTOMER INFORMATION -->
+
+                <fieldset>
+
+                    <legend>Customer Information</legend>
+
+
+                    <label for="fname">
+                        First Name:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fname"
+                        name="fname"
+                        placeholder="Enter your first name"
+                        required>
+
+
+                    <label for="lname">
+                        Last Name:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="lname"
+                        name="lname"
+                        placeholder="Enter your last name">
+
+
+                    <label for="email">
+                        Email Address:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+
+
+                    <label for="password">
+                        Account Password:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password">
+
+
+                    <label for="phone">
+                        Phone Number:
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number">
+
+
+                    <label for="date">
+                        Order Date:
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date">
+
+                </fieldset>
+
+
+                <!-- COMIC SELECTION -->
+
+                <fieldset>
+
+                    <legend>Comic Selection</legend>
+
+
+                    <label for="comic">
+                        Select Comic:
+                    </label>
+
+                    <select id="comic" name="comic">
+
+                        <option value="shadow">
+                            The Shadow Guardian
+                        </option>
+
+                        <option value="galaxy">
+                            Galaxy Warriors
+                        </option>
+
+                        <option value="magic">
+                            Chronicles of Magic
+                        </option>
+
+                        <option value="heroes">
+                            Ultimate Heroes
+                        </option>
+
+                    </select>
+
+
+                    <label for="quantity">
+                        Number of Copies:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        name="quantity"
+                        min="1"
+                        max="20"
+                        placeholder="Enter quantity">
+
+
+                    <p>
+                        <strong>Preferred Format:</strong>
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="format"
+                            value="digital">
+
+                        Digital Edition
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="format"
+                            value="paperback">
+
+                        Paperback
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="format"
+                            value="hardcover">
+
+                        Hardcover
+                    </label>
+
+
+                    <p>
+                        <strong>Additional Services:</strong>
+                    </p>
+
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="gift">
+
+                        🎁 Gift Wrapping
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="delivery">
+
+                        🚚 Express Delivery
+                    </label>
+
+                </fieldset>
+
+
+                <!-- CUSTOMER PREFERENCES -->
+
+                <fieldset>
+
+                    <legend>Customer Preferences</legend>
+
+
+                    <label for="rating">
+                        How much do you love comics?
+                    </label>
+
+                    <input
+                        type="range"
+                        id="rating"
+                        name="rating"
+                        min="0"
+                        max="100"
+                        value="80">
+
+
+                    <label for="search">
+                        Search Favourite Comic:
+                    </label>
+
+                    <input
+                        type="search"
+                        id="search"
+                        name="search"
+                        placeholder="Search comic">
+
+
+                    <label for="website">
+                        Your Website:
+                    </label>
+
+                    <input
+                        type="url"
+                        id="website"
+                        name="website"
+                        placeholder="https://example.com">
+
+
+                    <label for="message">
+                        Additional Requirements:
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Enter your requirements">
+                    </textarea>
+
+                </fieldset>
+
+
+                <!-- MEMBERSHIP PROGRESS -->
+
+                <fieldset>
+
+                    <legend>Collector Membership</legend>
+
+                    <p>
+                        ComicVerse Collector Membership Progress:
+                    </p>
+
+                    <progress
+                        value="70"
+                        max="100">
+                    </progress>
+
+                    <p>
+                        70% Completed
+                    </p>
+
+                </fieldset>
+
+
+                <!-- FORM BUTTONS -->
+
+                <input
+                    type="submit"
+                    value="🛒 Place Order">
+
+
+                <input
+                    type="reset"
+                    value="↻ Reset Form">
+
+
+            </form>
+
+        </section>
+
+    </div>
+
+
+    <!-- CONTACT SECTION -->
+
+    <div id="contact">
+
+        <section>
+
+            <h2>📞 Contact ComicVerse</h2>
+
+
+            <div class="info-box">
+
+                <h3>Customer Support</h3>
+
+                <p>
+                    📧 Email:
+                    contact@comicverse.com
+                </p>
+
+                <p>
+                    📞 Phone:
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    📍 Location:
+                    Coimbatore, Tamil Nadu
+                </p>
+
+                <p>
+                    🕘 Working Hours:
+                    Monday - Saturday, 9:00 AM - 7:00 PM
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- FOOTER SECTION -->
+
+    <footer>
+
+        <p>
+            © 2026 ComicVerse | Premium Comic Book Store
+        </p>
+
+        <p>
+            Designed using HTML5 & CSS
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
